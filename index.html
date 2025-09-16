@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="be">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Во имя истории | Всебелорусское место памяти жертв польской оккупации
+    </title>
+    <meta
+      name="description"
+      content="Береза-Картузская объявлена Всебелорусским местом памяти жертв польской оккупации"
+    />
+
+ <!-- Preconnect для внешних ресурсов -->
+    <link rel="preconnect" href="https://mc.yandex.ru" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    
+    <!-- Критический CSS инлайн (поместите основные стили здесь) -->
+    <style>
+        /* Критические стили для предотвращения FOUC */
+        html, body { 
+            margin: 0; padding: 0; 
+            overflow-x: hidden; 
+            font-family: "super", serif;
+        }
+        .loading-overlay { 
+            position: fixed; top: 0; left: 0; 
+            width: 100%; height: 100%; 
+            background: linear-gradient(135deg, #1a472a, #ce1126); 
+            display: flex; align-items: center; justify-content: center; 
+            z-index: 10000; 
+        }
+        .spinner { 
+            width: 40px; height: 40px; 
+            border: 3px solid rgba(255,255,255,0.3); 
+            border-top: 3px solid white; border-radius: 50%; 
+            animation: spin 1s linear infinite; 
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+
+
+<!-- Отложенная загрузка основных стилей -->
+    <link rel="preload" href="./assets/styles/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./assets/styles/style.css"></noscript>
+    
+    <!-- DNS prefetch для аналитики -->
+    <link rel="dns-prefetch" href="//mc.yandex.ru">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+
+
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+
+   
+  </head>
+  <body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading">
+      <div class="loading-content">
+        <div class="spinner"></div>
+        <h3>Загружается сайт памяти</h3>
+      </div>
+    </div>
+
+    <nav class="nav" id="navbar">
+      <div class="nav-container">
+        <a
+          href="https://www.sb.by/"
+          class="logo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="./assets/img/logo.png" alt="" />
+          <span class="logo-text">SB.BY</span>
+        </a>
+
+        <!-- Обычные ссылки (desktop) -->
+        <ul class="nav-links">
+          <li><a href="#hero">Главная</a></li>
+          <li><a href="#event-info">О событии</a></li>
+          <li><a href="#gallery">Фотогалерея</a></li>
+          <li><a href="#videos">Видео</a></li>
+          <li><a href="#timeline">Хронология</a></li>
+          <li><a href="#participants">Участники</a></li>
+          <li><a href="#memory">Память</a></li>
+        </ul>
+
+        <!-- Кнопка-гамбургер -->
+        <div class="burger-menu" id="burger">
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-menu-links">
+        <li><a href="#hero">Главная</a></li>
+        <li><a href="#event-info">О событии</a></li>
+        <li><a href="#gallery">Фотогалерея</a></li>
+        <li><a href="#videos">Видео</a></li>
+        <li><a href="#timeline">Хронология</a></li>
+        <li><a href="#participants">Участники</a></li>
+        <li><a href="#memory">Память</a></li>
+      </ul>
+    </div>
+
+    <section class="hero" id="hero">
+      <div class="bg bg1"></div>
+      <div class="bg bg2"></div>
+      <div class="bg bg3"></div>
+      <div class="bg bg4"></div>
+
+      <div class="overlay"></div>
+      <div class="live-report">
+        <h5 class="h5">ЖИВОЙ РЕПОРТАЖ</h5>
+        <div class="tags">
+          <span class="tag">Репортаж</span>
+          <span class="tag">ВО ИМЯ ИСТОРИИ</span>
+          <span class="tag">СБ Беларусь сегодня</span>
+        </div>
+      </div>
+      <div class="hero-content">
+        <h1>БЕРЕЗА-КАРТУЗСКАЯ :<br> <span class="">ВО ИМЯ ИСТОРИИ</h1>
+        <p class="hero-subtitle bounce">
+          Всебелорусское место памяти жертв польской оккупации провозглашено на месте бывшего концлагеря
+        </p>
+      </div>
+
+      <div class="scroll-indicator">
+        <div style="font-size: 2rem">↓</div>
+      </div>
+    </section>
+
+    <!-- Event Info Section -->
+    <section class="section event-info" id="event-info">
+      <div class="container">
+        <h2 class="section-title fade-in">О важности события</h2>
+        <div class="info-grid">
+          <div class="info-card fade-in">
+            <h3>15 сентября 2025</h3>
+            <p>
+              В этот день состоялся митинг-реквием, посвященный провозглашению
+              Всебелорусского места памяти жертв польской оккупации в Березе.
+              Событие объединило патриотически настроенных граждан из разных
+              уголков Беларуси.
+            </p>
+          </div>
+          <div class="info-card fade-in">
+            <h3>Историческое значение</h3>
+            <p>
+              Береза-Картузская - символ страданий белорусского народа в период
+              польской оккупации 1921-1939 годов. Концлагерь, через который
+              прошли тысячи невинных людей, теперь официально признан местом
+              национальной памяти.
+            </p>
+          </div>
+          <div class="info-card fade-in">
+            <h3>Единство народа</h3>
+            <p>
+              Более 500 участников из Минска, Бреста, Березы и других городов
+              приняли участие в автопробеге и митинге, демонстрируя единство
+              белорусского народа в сохранении исторической памяти.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- 3. Оптимизированная фотогалерея -->
+<section class="section gallery" id="gallery">
+  <div class="container">
+    <h2 class="section-title fade-in">Фотографии митинга-реквиема</h2>
+    <div class="photo-grid">
+      <!-- Оптимизированные фото с правильными размерами -->
+      <div class="photo-item fade-in" onclick="openGallery(0)">
+        <img src="./assets/img/brest-1.JPG" 
+             alt="Митинг на площади Свободы в Бресте"
+             loading="lazy"
+             decoding="async"
+             width="400"
+             height="250">
+       <div class="caption">Митинг на площади Свободы в Бресте</div>
+      </div>
+      
+      <div class="photo-item fade-in" onclick="openGallery(1)">
+        <img src="./assets/img/brest-2.JPG" 
+             alt="Возложение цветов"
+             loading="lazy"
+             decoding="async"
+             width="400"
+             height="250">
+        <div class="caption">Возложение цветов на площади Свободы в Бресте</div>
+      </div>
+      
+      <div class="photo-item fade-in" onclick="openGallery(2)">
+        <img src="./assets/img/brest-3.JPG" 
+             alt="Автопробег Брест - Береза"
+             loading="lazy"
+             decoding="async"
+             width="400"
+             height="250">
+        <div class="caption">Автопробег Брест - Береза</div>
+      </div>
+      
+      <div class="photo-item fade-in" onclick="openGallery(3)">
+        <img src="./assets/img/brest-4.JPG" 
+             alt="Участники из Минска"
+             loading="lazy"
+             decoding="async"
+             width="400"
+             height="250">
+        <div class="caption">Юные участники митинга</div>
+      </div>
+      
+      <div class="photo-item fade-in" onclick="openGallery(4)">
+        <img src="./assets/img/brest-5.JPG" 
+             alt="Посещение музея в Березе"
+             loading="lazy"
+             decoding="async"
+             width="400"
+             height="250">
+         <div class="caption">Посещение музея в Березе</div>
+      </div>
+      
+      <div class="photo-item fade-in" onclick="openGallery(5)">
+        <img src="./assets/img/brest-6.JPG" 
+             alt="Мемориал жертвам концлагеря"
+             loading="lazy"
+             decoding="async"
+             width="400"
+             height="250">
+        <div class="caption">Мемориал жертвам концлагеря</div>
+      </div>
+      
+      <div class="photo-item fade-in" onclick="openGallery(6)">
+        <img src="./assets/img/brest-7.JPG" 
+             alt="Возложение цветов - мемориал"
+             loading="lazy"
+             decoding="async"
+             width="400"
+             height="250">
+        <div class="caption">Возложение цветов - мемориал</div>
+      </div>
+      
+      <div class="photo-item fade-in" onclick="openGallery(7)">
+        <img src="./assets/img/brest-8.JPG" 
+             alt="Выступление творческого коллектива"
+             loading="lazy"
+             decoding="async"
+             width="400"
+             height="250">
+        <div class="caption">Выступление творческого коллектива</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section video-section" id="videos">
+  <div class="container">
+    <h2 class="section-title fade-in" style="color: white">
+      Видеоматериалы события
+    </h2>
+    
+    <div class="video-grid">
+      <!-- Видео с оптимизированными изображениями -->
+      <div class="video-item vertical fade-in" 
+           onclick="openVideoModal(this)" 
+           data-video="./assets/video/IMG_4139.MP4"
+           data-title="Автопробег в Березу"
+           data-description="Дорога памяти • 5:20">
+        <img src="./assets/img/video2.jpg" 
+             alt="Автопробег" 
+             class="video-thumb"
+             loading="lazy"
+             decoding="async"
+             width="300"
+             height="533">
+        <div class="overlay">
+          <div class="play-button"></div>       
+        </div>
+      </div>
+
+      <div class="video-item vertical fade-in" 
+           onclick="openVideoModal(this)" 
+           data-video="./assets/video/video3.mp4"
+           data-title="Посещение музея"
+           data-description="Историческая экспозиция • 4:30">
+        <img src="./assets/img/video3.jpg" 
+             alt="Посещение музея" 
+             class="video-thumb"
+             loading="lazy"
+             decoding="async"
+             width="300"
+             height="533">
+        <div class="overlay">
+          <div class="play-button"></div>
+        </div>
+      </div>
+
+      <div class="video-item vertical fade-in" 
+           onclick="openVideoModal(this)" 
+           data-video="./assets/video/video4.mp4"
+           data-title="Выступление В. Гигина"
+           data-description="Провозглашение • 7:15">
+        <img src="./assets/img/video4.jpg" 
+             alt="Выступление В. Гигина" 
+             class="video-thumb"
+             loading="lazy"
+             decoding="async"
+             width="300"
+             height="533">
+        <div class="overlay">
+          <div class="play-button"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Timeline -->
+    <section class="section timeline-section" id="timeline">
+      <div class="container">
+        <h2 class="section-title fade-in">Хронология дня 15 сентября</h2>
+        <div class="timeline">
+          <div class="timeline-item slide-in-left">
+            <div class="timeline-content">
+              <div class="timeline-date">10:00</div>
+              <h3 class="timeline-title">Возложение цветов в Бресте</h3>
+              <p>
+                Митинг начался на площади Свободы в Бресте с торжественного
+                возложения цветов к памятнику «Освобождение». Участники почтили
+                память жертв исторических репрессий.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item slide-in-right">
+            <div class="timeline-content">
+              <div class="timeline-date">11:30</div>
+              <h3 class="timeline-title">Автопробег Брест - Береза</h3>
+              <p>
+                Колонна из 500 участников на автомобилях отправилась по маршруту
+                памяти из Бреста в Березу. Дорога длиной в историю,
+                символизирующая путь к исторической справедливости.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item slide-in-left">
+            <div class="timeline-content">
+              <div class="timeline-date">14:00</div>
+              <h3 class="timeline-title">Посещение музея в Березе</h3>
+              <p>
+                Участники посетили музейную экспозицию, посвященную истории
+                концлагеря Береза-Картузская. Изучение архивных документов и
+                свидетельств очевидцев тех трагических событий.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item slide-in-right">
+            <div class="timeline-content">
+              <div class="timeline-date">16:00</div>
+              <h3 class="timeline-title">Митинг-реквием в мемориале</h3>
+              <p>
+                Торжественное провозглашение Всебелорусского места памяти жертв
+                польской оккупации. Выступление Вадима Гигина и единогласная
+                поддержка инициативы всеми участниками.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Participants Section -->
+<!-- Participants Section -->
+<section class="section participants" id="participants">
+  <div class="container">
+    <h2 class="section-title fade-in" style="color: white">
+      Участники события
+    </h2>
+    <div class="participants-grid">
+      <div class="participant-card fade-in">
+        <div class="participant-image">
+          <img src="./assets/img/autoprobeg.jpg" alt="Автопробег участников" loading="lazy">
+        </div>
+        <div class="participant-content">
+          <h3>Автопробег</h3>
+          <p>
+            Более 200 автомобилей приняли участие в памятном автопробеге из
+            Бреста в Березу
+          </p>
+        </div>
+      </div>
+      
+      <div class="participant-card fade-in">
+        <div class="participant-image">
+          <img src="./assets/img/patriotic-forces.jpg" alt="Патриотические силы" loading="lazy">
+        </div>
+        <div class="participant-content">
+          <h3>Патриотические силы</h3>
+          <p>
+            Представители патриотических организаций и движений со всей
+            Беларуси
+          </p>
+        </div>
+      </div>
+      
+      <div class="participant-card fade-in">
+        <div class="participant-image">
+          <img src="./assets/img/knowledge-society.jpg" alt="Общество Знание" loading="lazy">
+        </div>
+        <div class="participant-content">
+          <h3>Общество «Знание»</h3>
+          <p>
+            Активисты РГОО «Белорусское общество «Знание» под руководством
+            Вадима Гигина
+          </p>
+        </div>
+      </div>
+      
+      <div class="participant-card fade-in">
+        <div class="participant-image">
+          <img src="./assets/img/authorities.jpg" alt="Представители власти" loading="lazy">
+        </div>
+        <div class="participant-content">
+          <h3>Представители власти</h3>
+          <p>
+            Местные органы власти и общественные деятели поддержали инициативу
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Organizations Section -->
+    <section class="section organizations" id="organizations">
+      <div class="container">
+        <h2 class="section-title fade-in">Организаторы и партнеры</h2>
+        <div class="org-list">
+          <div class="org-item fade-in">
+            <h3>РГОО «Белорусское общество «Знание»</h3>
+            <p>
+              Главный организатор события. Председатель правления - Вадим Гигин.
+              Общество занимается просветительской деятельностью и сохранением
+              исторической памяти.
+            </p>
+          </div>
+          <div class="org-item fade-in">
+            <h3>Патриотические силы Беларуси</h3>
+            <p>
+              Объединение граждан, неравнодушных к истории своей страны и
+              сохранению памяти о трагических страницах прошлого.
+            </p>
+          </div>
+          <div class="org-item fade-in">
+            <h3>Местные исполкомы</h3>
+            <p>
+              Брестский и Березовский районные исполнительные комитеты оказали
+              организационную поддержку мероприятию.
+            </p>
+          </div>
+          <div class="org-item fade-in">
+            <h3>Музей истории Березы</h3>
+            <p>
+              Предоставил историческую экспозицию и экспертное сопровождение для
+              участников события.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="section stats-section">
+      <div class="container">
+        <h2 class="section-title fade-in" style="color: white">Цифры памяти</h2>
+        <div class="stats-grid">
+          <div class="stat-item fade-in">
+            <div class="stat-number" data-count="500">0</div>
+            <div class="stat-label">Участников митинга</div>
+          </div>
+          <div class="stat-item fade-in">
+            <div class="stat-number" data-count="200">0</div>
+            <div class="stat-label">Автомобилей в пробеге</div>
+          </div>
+          <div class="stat-item fade-in">
+            <div class="stat-number" data-count="10000">0</div>
+            <div class="stat-label">Жертв концлагеря</div>
+          </div>
+          <div class="stat-item fade-in">
+            <div class="stat-number" data-count="18">0</div>
+            <div class="stat-label">Лет польского гнета</div>
+          </div>
+          <div class="stat-item fade-in">
+            <div class="stat-number" data-count="86">0</div>
+            <div class="stat-label">Лет со дня освобождения</div>
+          </div>
+          <div class="stat-item fade-in">
+            <div class="stat-number" data-count="4">0</div>
+            <div class="stat-label">Города-участники</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historical Context -->
+    <section class="section historical-context" id="historical-context">
+      <div class="container">
+        <h2 class="section-title fade-in" style="color: white">
+          Историческая справка
+        </h2>
+        <div class="context-grid">
+          <div class="context-card fade-in">
+            <h3>Концлагерь Береза-Картузская</h3>
+            <p>
+              Действовал с 1934 по 1939 год на территории бывшего картезианского
+              монастыря. Стал символом репрессий против белорусского, польского,
+              русского и украинского населения. Условия содержания были крайне
+              тяжелыми, многие заключенные не выдерживали испытаний.
+            </p>
+          </div>
+          <div class="context-card fade-in">
+            <h3>Польская оккупация 1921-1939</h3>
+            <p>
+              После Рижского мирного договора 1921 года значительная часть
+              белорусских земель оказалась под польским контролем. Период
+              характеризовался подавлением белорусской культуры, языка и
+              национального самосознания.
+            </p>
+          </div>
+          <div class="context-card fade-in">
+            <h3>17 сентября 1939</h3>
+            <p>
+              День объединения Западной и Восточной Беларуси. Освобождение
+              территорий от польского господства и воссоединение белорусского
+              народа. Концлагерь Береза-Картузская прекратил свое существование.
+            </p>
+          </div>
+          <div class="context-card fade-in">
+            <h3>Память поколений</h3>
+            <p>
+              Сохранение исторической памяти о трагических событиях - долг
+              каждого поколения. Береза-Картузская должна напоминать о цене
+              свободы и необходимости защищать суверенитет Беларуси.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="section quote-section" id="memory">
+      <div class="container">
+        <div class="quote-container fade-in">
+          <p class="quote-text">
+            Сколько бы ни прошло времени, для нас и будущих поколений белорусов
+            Береза-Картузская навсегда останется местом народной памяти
+          </p>
+          <p class="quote-author">— Из речи на митинге-реквиеме</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section fade-in">
+            <h3>О событии</h3>
+            <p>
+              Митинг-реквием, посвященный провозглашению Всебелорусского места
+              памяти жертв польской оккупации в Березе. День народного единства
+              и исторической справедливости.
+            </p>
+          </div>
+          <div class="footer-section fade-in">
+            <h3>Организаторы</h3>
+            <p>
+              Патриотические силы Беларуси<br />
+              РГОО «Белорусское общество «Знание»<br />
+              Председатель правления - Вадим Гигин
+            </p>
+          </div>
+          <div class="footer-section fade-in">
+            <h3>Авторы материала</h3>
+            <p>
+              Максим Осипов<br />
+              Анастасия Целюк<br />
+              Фото: Александр Кулевский
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Во имя истории. Всебелорусское место памяти жертв
+            польской оккупации
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+    <div id="galleryModal" class="modal">
+  <span class="close" onclick="closeGallery()">&times;</span>
+  <div class="modal-content">
+    <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+    <img id="modalImage" src="" alt="">
+    <span class="next" onclick="changeSlide(1)">&#10095;</span>
+  </div>
+</div>
+
+
+
+<script>
+  // Inline критический JavaScript для предотвращения блокировки
+  document.documentElement.style.overflowX = 'hidden';
+  document.body.style.overflowX = 'hidden';
+</script>
+
+    <script src="./assets/scripts/main.js" defer></script>
+
+
+<script>
+  // Отложенная загрузка Yandex Metrika
+  function loadYandexMetrika() {
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) return;
+      }
+      (k = e.createElement(t)), (a = e.getElementsByTagName(t)[0]),
+      (k.async = 1), (k.src = r), a.parentNode.insertBefore(k, a);
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+    ym(16707172, "init", {
+      webvisor: true,
+      clickmap: true,
+      accurateTrackBounce: true,
+      trackLinks: true,
+    });
+  }
+  
+  // Загружаем аналитику через 3 секунды после загрузки
+  window.addEventListener('load', () => {
+    setTimeout(loadYandexMetrika, 3000);
+  });
+  
+  // Google Tag Manager - отложенная загрузка
+  function loadGTM() {
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-KRVNNK");
+  }
+  
+  // Загружаем GTM через 4 секунды
+  window.addEventListener('load', () => {
+    setTimeout(loadGTM, 4000);
+  });
+</script>
+
+  <!-- Video Modal -->
+<div id="videoModal" class="modal">
+  <span class="close" onclick="closeVideoModal()">&times;</span>
+  <div class="modal-content" id="videoModalContent">
+    <!-- Контент будет вставлен через JavaScript -->
+  </div>
+</div>  
+  </body>
+</html>
