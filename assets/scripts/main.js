@@ -517,3 +517,29 @@ function updateImage() {
     };
   }, 200);
 }
+
+
+ // Кнопка "Наверх" + прогресс прокрутки
+  (function(){
+    const btn = document.getElementById('toTop');
+    if(!btn) return;
+    const fg = btn.querySelector('.fg');
+    const CIRCUM = 120; // stroke-dasharray
+
+    function onScroll(){
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const doc = document.documentElement;
+      const max = (doc.scrollHeight - doc.clientHeight) || 1;
+      const progress = Math.min(scrollTop / max, 1);
+      if(fg) fg.style.strokeDashoffset = String(CIRCUM * (1 - progress));
+
+      if(scrollTop > 400) btn.classList.add('show');
+      else btn.classList.remove('show');
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+
+    btn.addEventListener('click', function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
