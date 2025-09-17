@@ -1845,3 +1845,48 @@ p.materials {
     transform: scale(1.05);
   }
 }
+
+
+.text-block {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+}
+
+.text-block .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6); /* затемнение */
+  z-index: 1;
+}
+
+.text-block .content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.text-block h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text-block p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+.text-block.left-align .content {
+  text-align: left;
+  margin-left: 0%;
+  max-width: 700px;  
+}
