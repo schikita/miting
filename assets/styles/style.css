@@ -201,11 +201,14 @@ body {
 }
 
 .hero-subtitle {
+  display: block;
+  min-height: 2.5em; /* резервируем место под 2 строки текста */
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 30px;
   font-style: italic;
 }
+
 
 .scroll-indicator {
   position: absolute;
